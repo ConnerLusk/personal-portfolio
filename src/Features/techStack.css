@@ -1,0 +1,58 @@
+.tiltContainer1 {
+    background-color: #DCF6CF;
+    height: max-content;
+    transform: skewY(2deg);
+    margin-top: 8vw;
+    height: 6vw;
+}
+
+.tiltContainer2 {
+    background-color: #DCF6CF;
+    height: max-content;
+    transform: skewY(-5deg);
+    margin-top: -5vw;
+    height: 7vw;
+}
+
+
+.MainContainer {
+    background-color: #DCF6CF;
+    height: max-content;
+    height:45vw;
+    margin-top: -7vw;
+}
+
+.MainContainer h1 {
+    font-size: 6vw;
+    margin-top: 2vw;
+    text-align: center;
+    margin-bottom: -4vw;
+}
+
+.MainContainer table {
+    z-index: 1;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 4vw;    
+    table-layout:fixed;
+}
+
+.MainContainer table tr{
+    justify-content: center;
+}
+.MainContainer table td { 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;
+}
+
+.MainContainer table td img{ 
+    width: 8vw;
+}
+
+
+
+
+
+
