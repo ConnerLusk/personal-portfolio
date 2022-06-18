@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+
+
+.mainContainer {
+    font-family: 'Raleway', sans-serif;
+}
+.Container h1 {
+    font-weight: 2;
+    padding-left: 3.5vw;
+    font-size: 15vw;
+    position: relative;
+    margin-top: 20vh;
+    color: aliceblue;
+    opacity: 60%;
+}
+
+.aboutContainer {
+    margin-top: -12vw;
+}
+
+.aboutContainer span {
+    font-weight: 1;
+    padding-left: 4.5vw;
+    font-size: 3vw;
+    color: aliceblue;
+    opacity: 60%;
+}
+
+
+.linkContainer ul {
+    display:flex;
+    padding-left: 4.5vw;
+    margin-top: -3px;
+}
+
+.linkContainer ul li {
+    list-style-type: none;
+    margin-right: 15px;
+    font-weight: 1;
+    font-size: 2.5vw;
+    color: #4FBDD8;
+    cursor: default;
+}
+
+.linkContainer ul li:hover {
+    color: aliceblue;
+    opacity: 60%;
+    cursor: grab;
+}

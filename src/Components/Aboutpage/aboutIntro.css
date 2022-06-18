@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;800&display=swap');
+
+.aboutIntroContainer {
+    margin-left: 15vw;
+    margin-top: 8vh;
+    width: 70vw;
+}
+
+.aboutPhotoContainer {
+    width: 25vw;
+    float: left;
+}
+
+.aboutPhotoContainer img {
+    width: 23vw;
+}
+
+.textContainer {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.textContainer h1 {
+    font-weight: 800;
+    font-size: 10vw;
+}
+
+.aboutTextContainer {
+    margin-top: -7vw;
+    margin-left: 25.6vw;
+}
+
+.aboutTextContainer {
+    font-size: 1vw;
+}
