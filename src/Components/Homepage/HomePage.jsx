@@ -43,14 +43,14 @@ const HomePage = ({displayedActivityMs}) => {
                             <li className='NewPageItem' onClick={() => SwitchPage("About")}>
                                 About
                             </li>
-                            <li>
+                            <li className='NewPageItem' onClick={() => SwitchPage("Projects")}>
                                 Projects
                             </li>
                             <li>
-                                Blog
+                                Github 
                             </li>
                             <li>
-                                Contact
+                                Linkedin
                             </li>
                         </ul>
                     </div>
