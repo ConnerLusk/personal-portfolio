@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from 'react-router-dom';
 
 const NavMenuContainer = styled.div`
   width: 100%;
@@ -12,7 +13,7 @@ const NavList = styled.ul`
   padding: 0 0.8em;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `;
 
 const NavLink = styled(motion.li)`
@@ -21,10 +22,11 @@ const NavLink = styled(motion.li)`
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-left:2vw;
   a {
     text-decoration: none;
     color: #444;
-    font-size: 20px;
+    font-size: 1.5vw;
     transition: all 200ms ease-in-out;
   }
   &:hover {
@@ -45,7 +47,15 @@ const variants = {
   },
 };
 
+
+
 export function NavMenu({ isOpen }) {
+  const navigate = useNavigate();
+
+  const SwitchPage = (name) => {
+      let location = "http://localhost:3000/" + name
+        navigate(location)
+  }
   return (
     <NavMenuContainer>
       <NavList>
@@ -63,7 +73,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </NavLink>
         <NavLink
           initial={false}
@@ -79,7 +89,9 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <a href="#">Products</a>
+          <div className="DifferentPage" onClick={() => SwitchPage("About")}>
+            About
+          </div>
         </NavLink>
         <NavLink
           initial={false}
@@ -95,55 +107,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <a href="#">Key Benefits</a>
-        </NavLink>
-        <NavLink
-          initial={false}
-          animate={isOpen ? "show" : "hide"}
-          variants={{
-            show: {
-              ...variants.show,
-              transition: { delay: 0.6, duration: 0.2 },
-            },
-            hide: {
-              ...variants.hide,
-              transition: { delay: 0.2, duration: 0.05 },
-            },
-          }}
-        >
-          <a href="#">About</a>
-        </NavLink>
-        <NavLink
-          initial={false}
-          animate={isOpen ? "show" : "hide"}
-          variants={{
-            show: {
-              ...variants.show,
-              transition: { delay: 0.7, duration: 0.2 },
-            },
-            hide: {
-              ...variants.hide,
-              transition: { delay: 0.25, duration: 0.05 },
-            },
-          }}
-        >
-          <a href="#">FAQ</a>
-        </NavLink>
-        <NavLink
-          initial={false}
-          animate={isOpen ? "show" : "hide"}
-          variants={{
-            show: {
-              ...variants.show,
-              transition: { delay: 0.8, duration: 0.2 },
-            },
-            hide: {
-              ...variants.hide,
-              transition: { delay: 0.3, duration: 0.05 },
-            },
-          }}
-        >
-          <a href="#">Contact</a>
+          <a href="/Projects">Projects</a>
         </NavLink>
       </NavList>
     </NavMenuContainer>
