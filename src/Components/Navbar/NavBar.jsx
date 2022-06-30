@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { HamburgerMenu } from "../../HamburgerMenu/index";
+import { HamburgerMenu } from "../hamburgerMenu/index";
 
 const NavbarContainer = styled.div`
   width: 100%;
