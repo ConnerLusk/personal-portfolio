@@ -24,6 +24,12 @@ function Projects() {
                                     "• Created a segmentation model with a 82% training accuracy and 76% validation accuracy",
                                     "• Fine tuned hyperparamters to decrease model bias"],github:"link"}} />
       </motion.div>
+      <motion.div initial={{x:-1500}} animate={{x:0}} transition={{duration:0.5,delay:1}}>
+        <IndividualProject props={{title:"Portfolio Website",languages:"Javascript: React, Framer-Motion",
+                                    about:["• Built a portfolio website to display current and past work",
+                                    "• Currently on the third iteration with new features including animation and multipage",]
+                                    ,github:"link"}} />
+      </motion.div>
     </div>
   )
 }
