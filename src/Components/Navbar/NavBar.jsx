@@ -6,7 +6,7 @@ const NavbarContainer = styled.div`
   width: 100%;
   height: 55px;
   display: flex;
-  flex-direction: row-reverse;
+  margin-left:3vw;
 `;
 
 export function Navbar(props) {

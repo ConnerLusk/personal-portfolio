@@ -1,7 +1,9 @@
+
 import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from 'react-router-dom';
+
 
 const NavMenuContainer = styled.div`
   width: 100%;
@@ -10,22 +12,23 @@ const NavMenuContainer = styled.div`
 `;
 
 const NavList = styled.ul`
-  padding: 0 0.8em;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: absolute;
+  flex-direction: column;
 `;
 
 const NavLink = styled(motion.li)`
   font-weight: 600;
-  height: 42px;
+  height: 4vw;
+  width:40vw;
   display: flex;
-  align-items: center;
+  align-items: right;
   cursor: pointer;
-  margin-left:2vw;
+  float:left;
+  font-family: 'JetBrains Mono', monospace;
   a {
     text-decoration: none;
-    color: #444;
+    color: #000;
     font-size: 1.5vw;
     transition: all 200ms ease-in-out;
   }
@@ -89,9 +92,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <div className="DifferentPage" onClick={() => SwitchPage("About")}>
-            About
-          </div>
+          <a href="/About">About</a>
         </NavLink>
         <NavLink
           initial={false}

@@ -14,14 +14,13 @@ const MenuContainer = styled(motion.div)`
   min-width: 300px;
   width: 100%;
   max-width: 30vw;
-  height: 5%;
   z-index: 90;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(4em);
+  position: fixed;
+  left: -1.1vw;
+  top:7vw;
   user-select: none;
 `;
+
 
 
 const ContentContainer = styled.div`
@@ -56,9 +55,7 @@ export function HamburgerMenu(props) {
 
   return (
     <HamburgerMenuContainer>
-      <MenuToggle toggle={toggleMenu} 
-                  isOpen={isOpen}
-      />
+      <MenuToggle toggle={toggleMenu} isOpen={isOpen}/>
       <MenuContainer
         initial={false}
         animate={isOpen ? "open" : "closed"}

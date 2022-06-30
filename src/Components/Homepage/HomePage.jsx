@@ -47,10 +47,10 @@ const HomePage = ({displayedActivityMs}) => {
                                 Projects
                             </li>
                             <li>
-                                Github 
+                                <a href="https://github.com/ConnerLusk" target="_blank">Github</a>
                             </li>
                             <li>
-                                Linkedin
+                                <a href="https://www.linkedin.com/in/connerlusk" target="_blank">Linkedin</a>
                             </li>
                         </ul>
                     </div>

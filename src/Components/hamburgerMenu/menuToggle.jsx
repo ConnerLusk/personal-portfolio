@@ -5,6 +5,8 @@ import styled from "styled-components";
 const Button = styled.div`
   z-index: 99;
   cursor: pointer;
+  margin-top:1vw;
+  position: fixed;
 `;
 
 const Path = (props) => (
@@ -21,7 +23,7 @@ const transition = { duration: 0.3 };
 export function MenuToggle({ toggle, isOpen }) {
   return (
     <Button onClick={toggle}>
-      <svg width="100" height="80" viewBox="0 -10 50 50">
+      <svg width="6vw" height="6vw" viewBox="0 -10 50 50">
         <Path
           animate={isOpen ? "open" : "closed"}
           initial={false}
