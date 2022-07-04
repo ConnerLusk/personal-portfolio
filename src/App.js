@@ -4,8 +4,9 @@ import ReactGa from 'react-ga'
 import { useEffect } from 'react';
 
 function App() {
+  const tracking_number = 'UA-233530919-1'
   useEffect(() => {
-    ReactGa.initialize('G-YD64K2DBMM')
+    ReactGa.initialize(tracking_number)
     // reprot page view
     ReactGa.pageview(window.location.pathname + window.location.search)
   }, [])
