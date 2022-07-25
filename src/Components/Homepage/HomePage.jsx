@@ -18,7 +18,7 @@ const HomePage = ({displayedActivityMs}) => {
 
     function updateDisplayedActivity(displayedActivityMs) {
         const pos = displayedActivityMs % 4;
-        const sayings = [" Subpar Chef 👨‍🍳"," Below Average Runner 🏃"," Avid Food Critic — Picky Eater 🍗"," Bogey Golfer ⛳️ "]
+        const sayings = [" Subpar Chef 👨‍🍳"," Marathon Runner 🏃"," Avid Food Critic — Picky Eater 🍗"," Bogey Golfer ⛳️ "]
         const newActivity = {
             activity: sayings[pos]
         }
