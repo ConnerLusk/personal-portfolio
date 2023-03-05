@@ -6,11 +6,9 @@ function Projects() {
   return (
     <div className='projectsContainer'>
       <motion.div initial={{x:-1500}} animate={{x:0}} transition={{duration:0.5,delay:0.1}}>
-        <IndividualProject props={{title:"Verdava",languages:"Javascript, Java: React, Nodejs, Springboot",
-                                    about:["• Creating a chrome extension to display environmental impact of clothes to shoppers",
-                                    "• Backend creating in springboot, connected to a postgres databse, and REST apis",
-                                    "• Manage a team of 2 engineers",
-                                    "• Note: This project is currently underdevelopment and looking to release beta in August"]}} />
+        <IndividualProject props={{title:"Mocha to Makai",languages:"Vuejs, Firestore, Tailwind, Vuex",
+                                    about:["• Created a fullstack website to display my families recipies",
+                                           "• Implemented authentication with Firestore and Local Storage"]}} />
       </motion.div>
       <motion.div initial={{x:-1500}} animate={{x:0}} transition={{duration:0.5,delay:0.4}}>
         <IndividualProject props={{title:"Automated Arbitrage",languages:"Python: Pandas, Numpy, Beatifulsoup, Selenium",
