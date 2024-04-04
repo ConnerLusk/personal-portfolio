@@ -1,25 +1,25 @@
 <template>
-  <div class="flex flex-col w-full mt-16">
-    <div class="w-3/4 mx-auto flex flex-col">
-      <div class="mx-auto flex text-4xl font-bold mb-6">Work Experience</div>
-      <Experience
-        v-for="item in workExperiences"
-        class="mb-10"
-        :CompanyName="item.CompanyName"
-        :Date="item.Date"
-        :Position="item.Position"
-        :Bullets="item.Bullets"
-      />
-      <div class="mx-auto flex text-4xl font-bold mt-10 mb-6">Research Experience</div>
-      <Experience
-        v-for="item in researchExperiences"
-        class="mb-5"
-        :CompanyName="item.CompanyName"
-        :Date="item.Date"
-        :Position="item.Position"
-        :Bullets="item.Bullets"
-      />
-    </div>
+    <div class="flex flex-col w-full" :class="isMobile ? '' : 'mt-16'">
+      <div class="flex flex-col" :class="isMobile ? 'mx-10' : 'mx-12'">
+        <div class="mx-auto flex text-4xl font-bold mb-3">Industry</div>
+        <Experience
+          v-for="item in workExperiences"
+          :CompanyName="item.CompanyName"
+          :Date="item.Date"
+          :Position="item.Position"
+          :Bullets="item.Bullets"
+          :isMobile="isMobile"
+        />
+        <div class="mx-auto flex text-4xl font-bold mt-10 mb-3">Research</div>
+        <Experience
+          v-for="item in researchExperiences"
+          :CompanyName="item.CompanyName"
+          :Date="item.Date"
+          :Position="item.Position"
+          :Bullets="item.Bullets"
+          :isMobile="isMobile"
+        />
+      </div>
   </div>
 </template>
 
@@ -28,10 +28,15 @@ import { ref, onMounted } from "vue";
 import Experience from "./Reusable/Experience.vue";
 
 export default {
+  props: {
+    isMobile: {
+      type: Boolean,
+    }
+  },
   components: {
     Experience,
   },
-  setup() {
+  setup(props) {
     const workExperiences = ref([
       {
         CompanyName: "Athenahealth",
@@ -80,7 +85,7 @@ export default {
         ],
       },
       {
-        CompanyName: "Stanford University/Vetran Affairs Hospital",
+        CompanyName: "Stanford University",
         Date: "May. 2022 -> Jul. 2022",
         Position: "Research Associate",
         Bullets: [
@@ -90,7 +95,7 @@ export default {
         ],
       },
     ]);
-    return { workExperiences, researchExperiences };
+    return { ...props, workExperiences, researchExperiences };
   },
 };
 </script>
