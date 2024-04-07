@@ -21,8 +21,6 @@
 </template>
 
 <script>
-import { ref, defineProps, onUnmounted } from "vue";
-
 export default {
   props: {
     ProjectName: {
@@ -46,7 +44,6 @@ export default {
     },
   },
   setup(props) {
-    console.log("prop", props.isMobile);
     return { ...props };
   },
 };

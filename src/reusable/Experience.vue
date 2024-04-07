@@ -15,8 +15,6 @@
 </template>
 
 <script>
-import { ref, defineProps, onUnmounted } from "vue";
-
 export default {
   props: {
     CompanyName: {

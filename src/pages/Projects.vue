@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref } from "vue";
 import Project from "../reusable/Project.vue";
 
 export default {
@@ -34,7 +34,6 @@ export default {
     Project,
   },
   setup(props) {
-    console.log("projects", props.isMobile);
     const projects = ref([
       {
         ProjectName: "Mocha to Makai",
