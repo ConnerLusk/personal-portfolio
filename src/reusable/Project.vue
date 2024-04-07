@@ -1,14 +1,20 @@
 <template>
   <div class="flex flex-col w-full">
-      <div class="text-2xl">{{ ProjectName }}</div>
-      <div class="text-md mb-1">{{ Tools }}</div>
-    <div v-for="bullet in Bullets" :class="isMobile ? 'text-sm' : 'text-sm'">{{ bullet }}</div>
+    <div class="text-2xl">{{ ProjectName }}</div>
+    <div class="text-md mb-1">{{ Tools }}</div>
+    <div v-for="bullet in Bullets" :class="isMobile ? 'text-sm' : 'text-sm'">
+      {{ bullet }}
+    </div>
     <div class="flex mt-2">
       <div v-if="Links.github !== ''">
-          <a :href="Links.github" class="fa-brands fa-github mr-2" role="button"/>
+        <a
+          :href="Links.github"
+          class="fa-brands fa-github mr-2"
+          role="button"
+        />
       </div>
       <div v-if="Links.website !== ''" class="cursor-grab">
-          <a :href="Links.website" class="fa-solid fa-display" role="button"/>
+        <a :href="Links.website" class="fa-solid fa-display" role="button" />
       </div>
     </div>
   </div>

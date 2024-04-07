@@ -18,13 +18,11 @@
 <script>
 import { ref, onMounted, onUnmounted } from "vue";
 
-
-
 export default {
   props: {
     isMobile: {
       type: Boolean,
-    }
+    },
   },
   setup(props) {
     const items = ref([
@@ -33,7 +31,7 @@ export default {
       " Food Lover🍗",
       " Bogey Golfer ⛳️ ",
     ]);
-   const selectedItem = ref(0);
+    const selectedItem = ref(0);
     let interval;
 
     const iterateItemn = () => {
@@ -49,7 +47,7 @@ export default {
     });
 
     return {
-      ...props, 
+      ...props,
       items,
       selectedItem,
     };

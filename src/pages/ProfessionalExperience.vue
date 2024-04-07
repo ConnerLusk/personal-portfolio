@@ -1,37 +1,37 @@
 <template>
-    <div class="flex flex-col w-full" :class="isMobile ? '' : 'mt-16'">
-      <div class="flex flex-col" :class="isMobile ? 'mx-10' : 'mx-12'">
-        <div class="mx-auto flex text-4xl font-bold mb-3">Industry</div>
-        <Experience
-          v-for="item in workExperiences"
-          :CompanyName="item.CompanyName"
-          :Date="item.Date"
-          :Position="item.Position"
-          :Bullets="item.Bullets"
-          :isMobile="isMobile"
-        />
-        <div class="mx-auto flex text-4xl font-bold mt-10 mb-3">Research</div>
-        <Experience
-          v-for="item in researchExperiences"
-          :CompanyName="item.CompanyName"
-          :Date="item.Date"
-          :Position="item.Position"
-          :Bullets="item.Bullets"
-          :isMobile="isMobile"
-        />
-      </div>
+  <div class="flex flex-col w-full" :class="isMobile ? '' : 'mt-16'">
+    <div class="flex flex-col" :class="isMobile ? 'mx-10' : 'mx-12'">
+      <div class="mx-auto flex text-4xl font-bold mb-3">Industry</div>
+      <Experience
+        v-for="item in workExperiences"
+        :CompanyName="item.CompanyName"
+        :Date="item.Date"
+        :Position="item.Position"
+        :Bullets="item.Bullets"
+        :isMobile="isMobile"
+      />
+      <div class="mx-auto flex text-4xl font-bold mt-10 mb-3">Research</div>
+      <Experience
+        v-for="item in researchExperiences"
+        :CompanyName="item.CompanyName"
+        :Date="item.Date"
+        :Position="item.Position"
+        :Bullets="item.Bullets"
+        :isMobile="isMobile"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import { ref, onMounted } from "vue";
-import Experience from "./Reusable/Experience.vue";
+import Experience from "../reusable/Experience.vue";
 
 export default {
   props: {
     isMobile: {
       type: Boolean,
-    }
+    },
   },
   components: {
     Experience,
