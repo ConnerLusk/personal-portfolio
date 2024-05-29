@@ -1,5 +1,6 @@
 <template>
   <div class="flex w-screen">
+    <v-vanta effect="dots" :options="vantaOptions"></v-vanta>
     <div v-if="isVertical" class="w-full flex">
       <div v-for="(item, index) in items" :key="index" class="flex h-screen">
         <div
@@ -15,10 +16,13 @@
         </div>
         <div
           v-if="item.expanded"
-          style="background-color: #edf2ef"
           :style="item.expanded ? openWidth : '0px'"
         >
-          <component :is="item.component" :isMobile="isVertical"> ></component>
+          <component
+            :style="item.title == 'Home' ? '' : 'background-color: #edf2ef'"
+            :is="item.component"
+            :isMobile="isVertical"
+          ></component>
         </div>
       </div>
     </div>
@@ -53,6 +57,7 @@ import Home from "./pages/Home.vue";
 import About from "./pages/About.vue";
 import Contact from "./pages/Contact.vue";
 import Projects from "./pages/Projects.vue";
+import VVanta from 'vue-vanta-revamp';
 
 export default {
   components: {
@@ -60,6 +65,7 @@ export default {
     About,
     Contact,
     Projects,
+    VVanta,
   },
   setup() {
     const items = ref([
@@ -84,6 +90,20 @@ export default {
         expanded: false,
       },
     ]);
+
+    const vantaOptions = {
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0xedf2ef,
+      color: 0x59656f,
+      spacing: 16.00,
+      showLines: false
+    }
 
     const selectedItem = ref(0);
     const openWidth = ref("");
@@ -128,6 +148,7 @@ export default {
 
     return {
       items,
+      vantaOptions,
       toggleTab,
       isVertical,
       openWidth,
@@ -136,3 +157,14 @@ export default {
   },
 };
 </script>
+
+<style>
+#vanta-bg {
+  z-index: -1000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}
+</style>
