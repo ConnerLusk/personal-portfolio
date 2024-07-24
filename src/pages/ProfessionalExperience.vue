@@ -43,7 +43,8 @@ export default {
         Date: "Jun. 2024 -> Aug. 2024",
         Position: "Software Engineer",
         Bullets: [
-          "• Will work rewriting client data infrastructure from monolith to microservices",
+          "• Recomponetizing components sections of patient overview page in React for reusability and maintainability",
+          "• Components used on page accessed 13 million times a day",
         ],
       },
       {
